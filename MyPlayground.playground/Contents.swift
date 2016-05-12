@@ -327,21 +327,376 @@ print(SomeEnumeration.computedTypeProperty)
 print(SomeClass.computedTypeProperty)
 
 
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    
+    var currentLevel:Int = 0{
+        didSet{
+            if currentLevel > AudioChannel.thresholdLevel {
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
+    
+}
+
+var leftChannel = AudioChannel()
+var rightChannel = AudioChannel()
+leftChannel.currentLevel = 7
+print(leftChannel.currentLevel)
+print(AudioChannel.maxInputLevelForAllChannels)
+
+rightChannel.currentLevel = 11
+print(rightChannel.currentLevel)
+print(AudioChannel.maxInputLevelForAllChannels)
+
+class Counter {
+    var count = 0
+    
+    func increment() {
+        count += 1
+    }
+    
+    func incrementBy(amount: Int) {
+        count += amount
+    }
+    
+    func incrementBy(amount: Int, times numberOfTimes: Int) {
+        count += amount * numberOfTimes
+    }
+    
+    func reset(){
+        count = 0
+    }
+}
+
+let counter = Counter()
+counter.increment()
+counter.incrementBy(5)
+counter.reset()
+counter.incrementBy(4, times: 12)
+
+print(counter.count)
+
+struct Point{
+    var x = 0.0, y = 0.0
+    func isToTheRightOfX(x: Double) -> Bool {
+        return self.x > x
+    }
+    
+    mutating func moveByX(deltaX: Double, y deltaY: Double){
+//        x += deltaX
+//        y += deltaY
+        self = Point(x: x + deltaX, y: y + deltaY)
+    }
+}
+
+var somePoint = Point(x: 4.0, y: 5.0)
+if somePoint.isToTheRightOfX(1.0){
+    print("This point is to the right of the line where x == 1.0")
+}
+somePoint.moveByX(2.0, y: 4.0)
+print("The point is now at (\(somePoint.x), \(somePoint.y))")
 
 
+enum TriStateSwitch{
+    case Off, Low, High
+    
+    mutating func next(){
+        switch self {
+        case .Off:
+            self = Low
+        case .Low:
+            self = High
+        case .High:
+            self = Off
+        }
+        
+        print("value = \(self)")
+    }
+}
+
+var ovenLight = TriStateSwitch.Low
+ovenLight.next()
+ovenLight.next()
+ovenLight.next()
+
+class SomeClassTest{
+    class func someTypeMethod() {
+        print("SomeClassTest.someTypeMethod")
+    }
+}
+
+class SomeClassTestSub: SomeClassTest{
+    override class func someTypeMethod(){
+        print("SomeClassTestSub.someTypeMethod")
+    }
+}
+
+SomeClassTest.someTypeMethod()
+let someClass = SomeClassTest()
+//someClass.someTypeMethod()
+UIColor.blueColor()
 
 
+struct LevelTracker {
+    static var highestUnlockedLevel = 1
+    
+    static func unlockLevel(level: Int){
+        if level > highestUnlockedLevel {
+            highestUnlockedLevel = level
+        }
+    }
+    
+    static func levelIsUnlocked(level: Int) -> Bool{
+        return level <= highestUnlockedLevel
+    }
+    
+    var currntLevel = 1
+    
+    mutating func advanceToLevel(level: Int) -> Bool{
+        if LevelTracker.levelIsUnlocked(level) {
+            currntLevel = level
+            return true
+        }else{
+            return false
+        }
+    }
+}
+
+class Player{
+    var tracker = LevelTracker()
+    let playerName: String
+    func completedLevel(level: Int){
+        LevelTracker.unlockLevel(level + 1)
+        tracker.advanceToLevel(level + 1)
+    }
+    
+    subscript(index: Int) -> Int{
+        get{
+            return 12
+        }
+        
+        set(newValue){
+            print("subscript set")
+        }
+    }
+    
+    init(name: String){
+        playerName = name
+    }
+}
+
+var player = Player(name: "Argyrios")
+player.completedLevel(1)
+print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
+
+player = Player(name: "Beto")
+if player.tracker.advanceToLevel(6){
+    print("player is now on level 6.")
+}else{
+    print("level 6 has not yet been unlocked.")
+}
+
+print("\(player[3])")
 
 
+var numberOfLegs = ["spider":8];
+//public subscript (key: Key) -> Value?
+numberOfLegs["bird"]
 
 
+struct Matrix {
+    let rows: Int, columns: Int
+    var grid: [Double]
+    
+    init(rows: Int, columns: Int){
+        self.rows = rows
+        self.columns = columns
+        grid = Array(count: rows * columns, repeatedValue: 0.0)
+    }
+    
+    func indexIsValidForRow(row: Int, column: Int) -> Bool {
+        return row >= 0 && row < rows && column < columns && column >= 0
+    }
+    
+    subscript(row: Int, column: Int) -> Double{
+        get{
+            assert(indexIsValidForRow(row, column: column), "Index out of range")
+            return grid[(row*columns) + column]
+        }
+        
+        set {
+            assert(indexIsValidForRow(row, column: column), "Index out of range")
+            grid[(row * columns) + column] = newValue
+        }
+    }
+}
+
+var matrix = Matrix(rows: 2, columns: 2)
+matrix[0, 1] = 1.5
+matrix[1, 0] = 3.2
 
 
+class Vehicle{
+    var currentSpeed = 0.0
+    var description: String{
+        return "traveling at \(currentSpeed) miles perhour"
+    }
+    
+    func makeNoise() {
+        print("Vehicle.makeNoise()")
+    }
+}
+
+class Car: Vehicle {
+    var gear = 1
+    override var description: String{
+        return super.description + " in gear \(gear)"
+    }
+    
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+
+let car = Car()
+car.currentSpeed = 24.0
+car.gear = 3
+print("Car: \(car.description)")
+car.makeNoise()
+
+class AutomaticCar: Car{
+    override var currentSpeed: Double{
+        didSet{
+            gear = Int(currentSpeed/10.0) + 1
+        }
+    }
+}
+
+let automatic = AutomaticCar()
+automatic.currentSpeed = 45.0
+print("AutomaticCar: \(automatic.description)")
 
 
+/*
+  Initialization.
+ */
+
+struct Fahrenheit{
+    var temperature: Double
+    
+    init(){
+        temperature = 43.0
+    }
+}
+
+var f = Fahrenheit()
+print("The default temperature is \(f.temperature) Fahrenheit")
 
 
+struct Celsius {
+    var temperatureInCelsius: Double
+    
+    init(fromFahrenheit fahrenheit: Double){
+        temperatureInCelsius = (fahrenheit - 32.0)/1.8
+    }
+    
+    init(fromKelvin kelvin: Double){
+        temperatureInCelsius = kelvin - 273.15
+    }
+    
+    init(_ celsius: Double){
+        temperatureInCelsius = celsius
+    }
+}
 
+let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+let freezingPointOfWater = Celsius(fromKelvin: 273.15)
+let bodyTemperature = Celsius(34)
+
+class SurveyQuestion {
+    var text: String
+    var response: String?
+    init(text: String){
+        self.text = text
+    }
+    
+    func ask() {
+        print(text)
+    }
+}
+
+struct Size {
+    var width = 0.0, height = 0.0
+}
+
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    init(){}
+    init(origin: Point, size: Size){
+        self.origin = origin
+        self.size = size
+    }
+    
+    init(center: Point, size: Size){
+        let originX = center.x - size.width/2
+        let originY = center.y - size.height/2
+        self.init(origin: Point(x: originX, y: originY), size: size)
+    }
+}
+
+let basicRect = Rect()
+
+class Food{
+    var name: String
+    init(name: String){
+        self.name = name
+    }
+    
+    convenience init(){
+        self.init(name: "[Unnamed]")
+    }
+}
+
+class RecipeIngredient: Food {
+    var quantity: Int
+    init(name: String, quantity: Int){
+        self.quantity = quantity
+        super.init(name: name)
+    }
+    
+    override convenience init(name: String) {
+        self.init(name: name, quantity: 1)
+    }
+}
+
+let oneMysteryItem = RecipeIngredient()
+let oneBacon = RecipeIngredient(name: "Bacon")
+let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+
+class ShoppingListItem: RecipeIngredient {
+    var purchased = false
+    var description: String{
+        var output = "\(quantity) x \(name)"
+        output += purchased ? " ✔":" ✘"
+        return output
+    }
+    
+}
+
+var breakfastList = [ShoppingListItem(), ShoppingListItem(name: "Bacon"), ShoppingListItem(name: "Eggs", quantity: 8)]
+breakfastList[0].name = "Orange juice"
+breakfastList[0].purchased = true
+for item in breakfastList{
+    print(item.description)
+}
 
 
 
