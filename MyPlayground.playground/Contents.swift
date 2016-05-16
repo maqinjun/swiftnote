@@ -179,6 +179,8 @@ let five = ArithmeticExpression.Number(3)
 let four = ArithmeticExpression.Number(8)
 let sum = ArithmeticExpression.Addition(five, four)
 let product = ArithmeticExpression.Multiplication(sum, ArithmeticExpression.Number(2))
+
+
 print("sum: \(sum) \nproduct: \(product)")
 
 func evaluate(expression: ArithmeticExpression) -> Int {
@@ -426,6 +428,7 @@ ovenLight.next()
 ovenLight.next()
 ovenLight.next()
 
+
 class SomeClassTest{
     class func someTypeMethod() {
         print("SomeClassTest.someTypeMethod")
@@ -487,12 +490,13 @@ class Player{
         }
     }
     
-    init(name: String){
+    init(name: String, age: Int = 9){
         playerName = name
     }
 }
 
-var player = Player(name: "Argyrios")
+var player = Player(name: "Argyrios", age: 2)
+
 player.completedLevel(1)
 print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
 
@@ -654,6 +658,8 @@ struct Rect {
 
 let basicRect = Rect()
 
+var basic = basicRect
+
 class Food{
     var name: String
     init(name: String){
@@ -672,6 +678,8 @@ class RecipeIngredient: Food {
         super.init(name: name)
     }
     
+    
+    
     override convenience init(name: String) {
         self.init(name: name, quantity: 1)
     }
@@ -680,6 +688,10 @@ class RecipeIngredient: Food {
 let oneMysteryItem = RecipeIngredient()
 let oneBacon = RecipeIngredient(name: "Bacon")
 let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+
+var one = oneMysteryItem
+
+
 
 class ShoppingListItem: RecipeIngredient {
     var purchased = false
@@ -926,19 +938,122 @@ do{
 
 
 
+struct Animal{
+    let species: String
+    init?(species: String){
+        if species.isEmpty {
+            return nil
+        }
+        self.species = species
+    }
+}
+
+let someCreature = Animal(species: "Giraffe")
+if let giraffe = someCreature{
+    print("An animal was initialized with a species of \(giraffe.species)")
+}
+
+let nilCreature = Animal(species: "")
+
+func guardTest(){
+    guard nilCreature != nil else{
+        print("nilCreature = \(nilCreature)")
+        return
+    }
+}
+
+guardTest()
 
 
+enum TemperatureUnit{
+    case Kelvin, Celsius, Fahrenheit
+    
+    init?(symbol: Character){
+        switch symbol {
+        case "K":
+            self = .Kelvin
+        case "C":
+            self = .Celsius
+        case "F":
+            self = .Fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+let fahrenheitUnit = TemperatureUnit(symbol: "F")
+if fahrenheitUnit != nil{
+    print("This is a defined temperature unit, so initialization succeeded.")
+}
+
+let unknownUnit = TemperatureUnit(symbol: "X")
+if unknownUnit == nil{
+    print("This is not a defined temperature unit, so initialization failed.")
+}
 
 
+class Product{
+    let name: String
+    init?(name: String){
+        if name.isEmpty{ return nil }
+        self.name = name
+    }
+}
 
+class CartItem: Product{
+    let quantity: Int
+    init?(name: String, quantity:Int) {
+        if quantity < 1 { return nil }
+        self.quantity = quantity
+        super.init(name: name)
+    }
+}
 
+if let twoSocks = CartItem(name: "sock", quantity: 4){
+    print("Item: \(twoSocks.name), quantity: \(twoSocks.quantity)")
+}
 
+class Document{
+    var name: String?
+    init(){}
+    init?(name: String){
+        if name.isEmpty{ return nil }
+        self.name = name
+    }
+}
 
+class AutomaticallyNameDocument: Document{
+    override init(){
+        super.init()
+        self.name = "[Untitled]"
+    }
+    
+    override init(name: String) {
+        super.init()
+        if name.isEmpty {
+            self.name = "[Untitled]"
+        }else{
+            self.name = name
+        }
+    }
+}
 
-
-
-
-
+class SomeClassClosure{
+    var someProperty: String = "" {
+        willSet{
+            print("willSet")
+        }
+        
+        didSet{
+            someProperty = "test"
+        }
+    }
+    
+    let some: Int = {
+        return 33
+    }()
+}
 
 
 
