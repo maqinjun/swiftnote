@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBD-Cg-KGX">
+                                <rect key="frame" x="210" y="285" width="179" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="Rjr-0p-YrC"/>
+                                    <constraint firstAttribute="height" constant="30" id="oRS-w4-V5Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-NP-ANF">
+                                <rect key="frame" x="179" y="67" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2UN-cH-mK5"/>
+                                    <constraint firstAttribute="width" constant="240" id="Lc5-S7-l9u"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqV-ZU-zNp">
+                                <rect key="frame" x="276" y="348" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="FoR-Dh-MWG"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qhl-Nk-TCI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qZM-lk-ehE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="d1J-NP-ANF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ni-Yz-CY1"/>
+                            <constraint firstItem="d1J-NP-ANF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="6v0-mu-oSA"/>
+                            <constraint firstItem="d1J-NP-ANF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="159" id="NfE-Sa-FFY"/>
+                            <constraint firstItem="FqV-ZU-zNp" firstAttribute="top" secondItem="KBD-Cg-KGX" secondAttribute="bottom" constant="33" id="Pws-e3-pzL"/>
+                            <constraint firstItem="KBD-Cg-KGX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="auX-Uj-Krg"/>
+                            <constraint firstItem="KBD-Cg-KGX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qKa-Fx-gEs"/>
+                            <constraint firstItem="FqV-ZU-zNp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uzn-wq-J4s"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NfE-Sa-FFY"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wbz-vy-GW5" appends="YES" id="nSe-2t-jvD"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="textFeild" destination="KBD-Cg-KGX" id="rNg-Hk-nVW"/>
+                        <outlet property="textView" destination="d1J-NP-ANF" id="KVC-jC-aEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wbz-vy-GW5">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="lKW-B0-Ufm"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="570" y="357"/>
+        </scene>
+    </scenes>
+</document>
