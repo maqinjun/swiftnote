@@ -699,6 +699,233 @@ for item in breakfastList{
 }
 
 
+struct Chessboard{
+    let boardColors: [Bool] = {
+        var temporaryBoard = [Bool]()
+        var isBlack = false
+        
+        for i in 1...8{
+            for j in 1...8{
+                temporaryBoard.append(isBlack)
+                isBlack = !isBlack
+            }
+            
+            isBlack = !isBlack
+        }
+        
+        return temporaryBoard
+    }()
+    
+    func squareIsBlackAtRow(row: Int, column: Int) -> Bool {
+        return boardColors[(row * 8) + column]
+    }
+}
+
+let board = Chessboard()
+print(board.squareIsBlackAtRow(0, column: 1))
+print(board.squareIsBlackAtRow(7, column: 7))
+
+
+class Bank{
+    static var coinsInBank = 10_000
+    static func vendCoins(numberOfCoinsRequested: Int) -> Int{
+        let numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
+        coinsInBank -= numberOfCoinsToVend
+        return numberOfCoinsToVend
+    }
+    
+    static func receiveCoins(coins: Int){
+        coinsInBank += coins
+    }
+}
+
+
+class PlayerCoins{
+    var coinsInPurse: Int
+    
+    init(coins: Int){
+        coinsInPurse = Bank.vendCoins(coins)
+    }
+    
+    func winCoins(coins: Int){
+        coinsInPurse += Bank.vendCoins(coins)
+    }
+    
+    deinit{
+        Bank.receiveCoins(coinsInPurse)
+    }
+}
+
+var playerOne: PlayerCoins? = PlayerCoins(coins: 100)
+print("A new player has joined the game with \(playerOne!.coinsInPurse) coins")
+print("There are now \(Bank.coinsInBank) coins left in the bank")
+
+playerOne!.winCoins(2_000)
+print("PlaerOne won 2000 coins & now has \(playerOne!.coinsInPurse) coins")
+print("The bank now only has \(Bank.coinsInBank) coins left")
+
+playerOne = nil
+print("PlayerOne has left the game")
+print("The bank now has \(Bank.coinsInBank) coins")
+
+class Apartment{
+    let unit: String
+    init(unit: String){ self.unit = unit}
+    deinit{ print("Apartment \(unit) is being deinitialized")}
+    weak var tenant: Person?
+}
+
+class Person{
+    let name: String
+    init(name: String){
+        self.name = name
+        print("\(name) is being initialized")
+    }
+    deinit{
+        print("\(name) is being deinitialized")
+    }
+    
+    var apartment: Apartment?
+}
+
+var john: Person?
+var unit4A: Apartment?
+
+john = Person(name: "John Appleseed")
+unit4A = Apartment(unit: "4A")
+john!.apartment = unit4A
+unit4A!.tenant = john
+john = nil
+unit4A = nil
+
+
+class Customer{
+    let name: String
+    var card: CreditCard?
+    init(name: String){ self.name = name}
+    deinit{ print("\(name) is being deinitialized")}
+}
+
+class CreditCard{
+    let number: UInt64
+    unowned let customer: Customer
+    init(number: UInt64, customer: Customer){
+        self.number = number
+        self.customer = customer
+    }
+    deinit{ print("Card #\(number) is being deinitialized")}
+}
+
+var customer: Customer? = Customer(name: "John Appleseed")
+customer!.card = CreditCard(number: 1234_5678_9012_3456, customer: customer!)
+
+
+enum VendingMachineError: ErrorType {
+    case InvalidSelection
+    case InsufficientFounds(coinsNeeded: Int)
+    case OutOfStock
+}
+
+struct Item {
+    var price: Int
+    var count: Int
+}
+
+class VendingMachine{
+    var inventory = [
+        "Candy Bar": Item(price: 12, count: 7),
+        "Chips": Item(price: 10, count: 4),
+        "Pretzels": Item(price: 7, count: 11)
+    ]
+    
+    var coinsDeposited = 0
+    
+    func dispenseSnack(snack: String) {
+        print("Dispensing \(snack)")
+    }
+    
+    func vend(itemNamed name: String) throws -> Void {
+        guard let item = inventory[name] else{
+            throw VendingMachineError.InsufficientFounds(coinsNeeded: 5)
+        }
+        
+        guard item.count > 0 else {
+            throw VendingMachineError.OutOfStock
+        }
+        
+        guard item.price <= coinsDeposited else{
+            throw VendingMachineError.InsufficientFounds(coinsNeeded: item.price - coinsDeposited)
+        }
+        
+        coinsDeposited -= item.price
+        
+        var newItem = item
+        newItem.count -= 1
+        inventory[name] = newItem
+        
+        dispenseSnack(name)
+    }
+    
+    let favoriteSnacks = [
+        "Alice": "Chips",
+        "Bob": "Licorice",
+        "Eve": "Pretzels"
+    ]
+    
+    func buyFavoriteSnack(person: String, vendingMachine: VendingMachine)throws -> Void {
+        let snackName = favoriteSnacks[person] ?? "Candy Bar"
+        try vendingMachine.vend(itemNamed: snackName)
+    }
+}
+
+struct PurchasedSnack {
+    let name: String
+    init(name: String, vendingMachine: VendingMachine) throws{
+        try vendingMachine.vend(itemNamed: name)
+        self.name = name
+    }
+}
+
+var vendingMachine = VendingMachine()
+vendingMachine.coinsDeposited = 8
+
+do{
+    try PurchasedSnack(name: "Alice", vendingMachine: vendingMachine)
+}catch VendingMachineError.InvalidSelection{
+    print("Invalid Selection.")
+}catch VendingMachineError.OutOfStock{
+    print("Out of Stock.")
+}catch VendingMachineError.InsufficientFounds(let coinsNeed){
+    print("Insufficient funds. Please insert an additional \(coinsNeed) coins.")
+}
+
+
+func someThrowingFunction() throws -> Int {
+    print("some throwing function")
+    throw VendingMachineError.OutOfStock
+}
+
+let x = try? someThrowingFunction()
+let y: Int?
+
+do{
+    y = try someThrowingFunction()
+}catch{
+    y = nil
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

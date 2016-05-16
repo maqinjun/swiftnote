@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F70EE5F31C8D5B740000400A /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */; };
+		F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B8DD431C86C3B500D6EC70 /* fishhook.c */; };
+		F7C6D7A41C85670100BB9304 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6D7A31C85670100BB9304 /* ContactsHook.m */; };
+		F7EEAA2E1C7EEE4E00F9F146 /* EmmLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7EEAA2D1C7EEE4E00F9F146 /* EmmLib.h */; };
+		F7EEAA301C7EEE4E00F9F146 /* EmmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7EEAA281C7EEE4E00F9F146 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F7EEAA2E1C7EEE4E00F9F146 /* EmmLib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPasteboardHook.h; sourceTree = "<group>"; };
+		F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardHook.m; sourceTree = "<group>"; };
+		F7B8DD431C86C3B500D6EC70 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		F7B8DD441C86C3B500D6EC70 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		F7C6D7A21C85670100BB9304 /* ContactsHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsHook.h; sourceTree = "<group>"; };
+		F7C6D7A31C85670100BB9304 /* ContactsHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsHook.m; sourceTree = "<group>"; };
+		F7EEAA2A1C7EEE4E00F9F146 /* EmmLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = EmmLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7EEAA2D1C7EEE4E00F9F146 /* EmmLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmmLib.h; sourceTree = "<group>"; };
+		F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmmLib.m; sourceTree = "<group>"; };
+		F7EEAA4B1C7EF4E000F9F146 /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaptainHook.h; path = EmmLib/CaptainHook/CaptainHook.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7EEAA271C7EEE4E00F9F146 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7EEAA211C7EEE4E00F9F146 = {
+			isa = PBXGroup;
+			children = (
+				F7EEAA2C1C7EEE4E00F9F146 /* EmmLib */,
+				F7EEAA2B1C7EEE4E00F9F146 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7EEAA2B1C7EEE4E00F9F146 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7EEAA2A1C7EEE4E00F9F146 /* EmmLib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7EEAA2C1C7EEE4E00F9F146 /* EmmLib */ = {
+			isa = PBXGroup;
+			children = (
+				F7B8DD431C86C3B500D6EC70 /* fishhook.c */,
+				F7B8DD441C86C3B500D6EC70 /* fishhook.h */,
+				F7C6D7A21C85670100BB9304 /* ContactsHook.h */,
+				F7C6D7A31C85670100BB9304 /* ContactsHook.m */,
+				F7EEAA4C1C7EF4F400F9F146 /* CaptainHook */,
+				F7EEAA2D1C7EEE4E00F9F146 /* EmmLib.h */,
+				F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */,
+				F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */,
+				F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */,
+			);
+			path = EmmLib;
+			sourceTree = "<group>";
+		};
+		F7EEAA4C1C7EF4F400F9F146 /* CaptainHook */ = {
+			isa = PBXGroup;
+			children = (
+				F7EEAA4B1C7EF4E000F9F146 /* CaptainHook.h */,
+			);
+			name = CaptainHook;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7EEAA291C7EEE4E00F9F146 /* EmmLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7EEAA331C7EEE4E00F9F146 /* Build configuration list for PBXNativeTarget "EmmLib" */;
+			buildPhases = (
+				F7EEAA261C7EEE4E00F9F146 /* Sources */,
+				F7EEAA271C7EEE4E00F9F146 /* Frameworks */,
+				F7EEAA281C7EEE4E00F9F146 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmmLib;
+			productName = EmmLib;
+			productReference = F7EEAA2A1C7EEE4E00F9F146 /* EmmLib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7EEAA221C7EEE4E00F9F146 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = uusafe;
+				TargetAttributes = {
+					F7EEAA291C7EEE4E00F9F146 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = CGDYC7CLQY;
+					};
+				};
+			};
+			buildConfigurationList = F7EEAA251C7EEE4E00F9F146 /* Build configuration list for PBXProject "EmmLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7EEAA211C7EEE4E00F9F146;
+			productRefGroup = F7EEAA2B1C7EEE4E00F9F146 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7EEAA291C7EEE4E00F9F146 /* EmmLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7EEAA261C7EEE4E00F9F146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C6D7A41C85670100BB9304 /* ContactsHook.m in Sources */,
+				F70EE5F31C8D5B740000400A /* UIPasteboardHook.m in Sources */,
+				F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */,
+				F7EEAA301C7EEE4E00F9F146 /* EmmLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F7EEAA311C7EEE4E00F9F146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		F7EEAA321C7EEE4E00F9F146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7EEAA341C7EEE4E00F9F146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INSTALL_PATH = "@executable_path/";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F7EEAA351C7EEE4E00F9F146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INSTALL_PATH = "@executable_path/";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7EEAA251C7EEE4E00F9F146 /* Build configuration list for PBXProject "EmmLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7EEAA311C7EEE4E00F9F146 /* Debug */,
+				F7EEAA321C7EEE4E00F9F146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7EEAA331C7EEE4E00F9F146 /* Build configuration list for PBXNativeTarget "EmmLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7EEAA341C7EEE4E00F9F146 /* Debug */,
+				F7EEAA351C7EEE4E00F9F146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7EEAA221C7EEE4E00F9F146 /* Project object */;
+}
