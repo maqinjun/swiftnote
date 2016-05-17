@@ -19,11 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    UIPasteboard *paster = [UIPasteboard generalPasteboard];
-    paster.string = @"string to test2";
-    NSArray *items = paster.items;
-    
+        
     return YES;
 }
 

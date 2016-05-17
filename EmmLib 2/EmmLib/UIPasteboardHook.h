@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern BOOL isGeneral;
+
 @interface UIPasteboardHook : NSObject
-+(UIPasteboardHook*)shared;
 + (void) hook;
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C855534A1CEAEB9C00C5573C /* UUPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553491CEAEB9C00C5573C /* UUPasteboard.m */; };
+		C85553531CEB027700C5573C /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553521CEB027700C5573C /* PersistenceUtil.m */; };
 		F70EE5F31C8D5B740000400A /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */; };
 		F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B8DD431C86C3B500D6EC70 /* fishhook.c */; };
 		F7C6D7A41C85670100BB9304 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6D7A31C85670100BB9304 /* ContactsHook.m */; };
@@ -28,6 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C85553481CEAEB9C00C5573C /* UUPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUPasteboard.h; sourceTree = "<group>"; };
+		C85553491CEAEB9C00C5573C /* UUPasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPasteboard.m; sourceTree = "<group>"; };
+		C85553511CEB027700C5573C /* PersistenceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceUtil.h; sourceTree = "<group>"; };
+		C85553521CEB027700C5573C /* PersistenceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceUtil.m; sourceTree = "<group>"; };
 		F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPasteboardHook.h; sourceTree = "<group>"; };
 		F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardHook.m; sourceTree = "<group>"; };
 		F7B8DD431C86C3B500D6EC70 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C85553501CEB027700C5573C /* persistence */ = {
+			isa = PBXGroup;
+			children = (
+				C85553511CEB027700C5573C /* PersistenceUtil.h */,
+				C85553521CEB027700C5573C /* PersistenceUtil.m */,
+			);
+			path = persistence;
+			sourceTree = "<group>";
+		};
 		F7EEAA211C7EEE4E00F9F146 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +85,7 @@
 		F7EEAA2C1C7EEE4E00F9F146 /* EmmLib */ = {
 			isa = PBXGroup;
 			children = (
+				C85553501CEB027700C5573C /* persistence */,
 				F7B8DD431C86C3B500D6EC70 /* fishhook.c */,
 				F7B8DD441C86C3B500D6EC70 /* fishhook.h */,
 				F7C6D7A21C85670100BB9304 /* ContactsHook.h */,
@@ -79,6 +95,8 @@
 				F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */,
 				F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */,
 				F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */,
+				C85553481CEAEB9C00C5573C /* UUPasteboard.h */,
+				C85553491CEAEB9C00C5573C /* UUPasteboard.m */,
 			);
 			path = EmmLib;
 			sourceTree = "<group>";
@@ -152,6 +170,8 @@
 				F7C6D7A41C85670100BB9304 /* ContactsHook.m in Sources */,
 				F70EE5F31C8D5B740000400A /* UIPasteboardHook.m in Sources */,
 				F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */,
+				C85553531CEB027700C5573C /* PersistenceUtil.m in Sources */,
+				C855534A1CEAEB9C00C5573C /* UUPasteboard.m in Sources */,
 				F7EEAA301C7EEE4E00F9F146 /* EmmLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

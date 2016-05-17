@@ -21,6 +21,14 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [EmmLib pasteboardHookEnable:YES];
+    
+//    NSLog(@"%@", UIPasteboardNameGeneral);
+//    NSLog(@"%@", UIPasteboardNameFind);
+//    
+//    UIPasteboard *paster = [UIPasteboard generalPasteboard];
+//    paster.string = @"string to test2";
+//
+//    paster.image = [UIImage imageNamed:@"test.png"];
 }
 
 - (void)didReceiveMemoryWarning {

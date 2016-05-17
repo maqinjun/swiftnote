@@ -32,5 +32,9 @@ __attribute__((constructor)) static void entry()
 }
 
 @implementation EmmLib
-
++ (void)pasteboardHookEnable:(BOOL)is{
+    @synchronized (self) {
+        isGeneral = !is;
+    }
+}
 @end

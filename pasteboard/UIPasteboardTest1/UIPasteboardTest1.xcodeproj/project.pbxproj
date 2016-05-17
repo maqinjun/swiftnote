@@ -7,15 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C82B78E51CE9922700B13B3A /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B78D31CE9922700B13B3A /* ContactsHook.m */; };
-		C82B78E61CE9922700B13B3A /* EmmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B78D51CE9922700B13B3A /* EmmLib.m */; };
-		C82B78E71CE9922700B13B3A /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C82B78D71CE9922700B13B3A /* fishhook.c */; };
-		C82B78E81CE9922700B13B3A /* fishhook.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C82B78D91CE9922700B13B3A /* fishhook.podspec */; };
-		C82B78E91CE9922700B13B3A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C82B78DA1CE9922700B13B3A /* LICENSE */; };
-		C82B78EA1CE9922700B13B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C82B78DB1CE9922700B13B3A /* README.md */; };
-		C82B78EB1CE9922700B13B3A /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B78DD1CE9922700B13B3A /* JRSwizzle.m */; };
-		C82B78EE1CE9922700B13B3A /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B78E11CE9922700B13B3A /* PersistenceUtil.m */; };
-		C82B78EF1CE9922700B13B3A /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B78E31CE9922700B13B3A /* UIPasteboardHook.m */; };
+		C855534F1CEAFF0F00C5573C /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = C855534E1CEAFF0F00C5573C /* test.png */; };
+		C85553981CEB080000C5573C /* EmmLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C85553941CEB080000C5573C /* EmmLib.dylib */; };
+		C85553991CEB080500C5573C /* EmmLib.dylib in Resources */ = {isa = PBXBuildFile; fileRef = C85553941CEB080000C5573C /* EmmLib.dylib */; };
 		C8748C701CE5853A004125DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C6F1CE5853A004125DB /* main.m */; };
 		C8748C731CE5853A004125DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C721CE5853A004125DB /* AppDelegate.m */; };
 		C8748C761CE5853A004125DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C751CE5853A004125DB /* ViewController.m */; };
@@ -44,22 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C82B78D11CE9922700B13B3A /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
-		C82B78D21CE9922700B13B3A /* ContactsHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsHook.h; sourceTree = "<group>"; };
-		C82B78D31CE9922700B13B3A /* ContactsHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsHook.m; sourceTree = "<group>"; };
-		C82B78D41CE9922700B13B3A /* EmmLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmmLib.h; sourceTree = "<group>"; };
-		C82B78D51CE9922700B13B3A /* EmmLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmmLib.m; sourceTree = "<group>"; };
-		C82B78D71CE9922700B13B3A /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
-		C82B78D81CE9922700B13B3A /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
-		C82B78D91CE9922700B13B3A /* fishhook.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fishhook.podspec; sourceTree = "<group>"; };
-		C82B78DA1CE9922700B13B3A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C82B78DB1CE9922700B13B3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C82B78DC1CE9922700B13B3A /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
-		C82B78DD1CE9922700B13B3A /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
-		C82B78E01CE9922700B13B3A /* PersistenceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceUtil.h; sourceTree = "<group>"; };
-		C82B78E11CE9922700B13B3A /* PersistenceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceUtil.m; sourceTree = "<group>"; };
-		C82B78E21CE9922700B13B3A /* UIPasteboardHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPasteboardHook.h; sourceTree = "<group>"; };
-		C82B78E31CE9922700B13B3A /* UIPasteboardHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardHook.m; sourceTree = "<group>"; };
+		C855534E1CEAFF0F00C5573C /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		C85553941CEB080000C5573C /* EmmLib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = EmmLib.dylib; sourceTree = "<group>"; };
+		C85553971CEB080000C5573C /* EmmLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmmLib.h; sourceTree = "<group>"; };
 		C8748C6B1CE58539004125DB /* UIPasteboardTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPasteboardTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748C6F1CE5853A004125DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8748C711CE5853A004125DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85553981CEB080000C5573C /* EmmLib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,49 +85,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C82B78CE1CE9922700B13B3A /* EmmLib */ = {
+		C85553951CEB080000C5573C /* include */ = {
 			isa = PBXGroup;
 			children = (
-				C82B78D01CE9922700B13B3A /* CaptainHook */,
-				C82B78D21CE9922700B13B3A /* ContactsHook.h */,
-				C82B78D31CE9922700B13B3A /* ContactsHook.m */,
-				C82B78D41CE9922700B13B3A /* EmmLib.h */,
-				C82B78D51CE9922700B13B3A /* EmmLib.m */,
-				C82B78D61CE9922700B13B3A /* fishhook */,
-				C82B78DC1CE9922700B13B3A /* JRSwizzle.h */,
-				C82B78DD1CE9922700B13B3A /* JRSwizzle.m */,
-				C82B78E01CE9922700B13B3A /* PersistenceUtil.h */,
-				C82B78E11CE9922700B13B3A /* PersistenceUtil.m */,
-				C82B78E21CE9922700B13B3A /* UIPasteboardHook.h */,
-				C82B78E31CE9922700B13B3A /* UIPasteboardHook.m */,
+				C85553961CEB080000C5573C /* EmmLib */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C85553961CEB080000C5573C /* EmmLib */ = {
+			isa = PBXGroup;
+			children = (
+				C85553971CEB080000C5573C /* EmmLib.h */,
 			);
 			path = EmmLib;
-			sourceTree = "<group>";
-		};
-		C82B78D01CE9922700B13B3A /* CaptainHook */ = {
-			isa = PBXGroup;
-			children = (
-				C82B78D11CE9922700B13B3A /* CaptainHook.h */,
-			);
-			path = CaptainHook;
-			sourceTree = "<group>";
-		};
-		C82B78D61CE9922700B13B3A /* fishhook */ = {
-			isa = PBXGroup;
-			children = (
-				C82B78D71CE9922700B13B3A /* fishhook.c */,
-				C82B78D81CE9922700B13B3A /* fishhook.h */,
-				C82B78D91CE9922700B13B3A /* fishhook.podspec */,
-				C82B78DA1CE9922700B13B3A /* LICENSE */,
-				C82B78DB1CE9922700B13B3A /* README.md */,
-			);
-			path = fishhook;
 			sourceTree = "<group>";
 		};
 		C8748C621CE58539004125DB = {
 			isa = PBXGroup;
 			children = (
-				C82B78CE1CE9922700B13B3A /* EmmLib */,
+				C85553941CEB080000C5573C /* EmmLib.dylib */,
+				C85553951CEB080000C5573C /* include */,
+				C855534E1CEAFF0F00C5573C /* test.png */,
 				C8748C6D1CE5853A004125DB /* UIPasteboardTest1 */,
 				C8748C871CE5853A004125DB /* UIPasteboardTest1Tests */,
 				C8748C921CE5853A004125DB /* UIPasteboardTest1UITests */,
@@ -311,11 +272,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82B78E91CE9922700B13B3A /* LICENSE in Resources */,
-				C82B78E81CE9922700B13B3A /* fishhook.podspec in Resources */,
+				C85553991CEB080500C5573C /* EmmLib.dylib in Resources */,
 				C8748C7E1CE5853A004125DB /* LaunchScreen.storyboard in Resources */,
 				C8748C7B1CE5853A004125DB /* Assets.xcassets in Resources */,
 				C8748C791CE5853A004125DB /* Main.storyboard in Resources */,
+				C855534F1CEAFF0F00C5573C /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,15 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82B78EE1CE9922700B13B3A /* PersistenceUtil.m in Sources */,
-				C82B78EF1CE9922700B13B3A /* UIPasteboardHook.m in Sources */,
-				C82B78E61CE9922700B13B3A /* EmmLib.m in Sources */,
 				C8748C761CE5853A004125DB /* ViewController.m in Sources */,
-				C82B78EB1CE9922700B13B3A /* JRSwizzle.m in Sources */,
-				C82B78E51CE9922700B13B3A /* ContactsHook.m in Sources */,
-				C82B78EA1CE9922700B13B3A /* README.md in Sources */,
 				C8748C731CE5853A004125DB /* AppDelegate.m in Sources */,
-				C82B78E71CE9922700B13B3A /* fishhook.c in Sources */,
 				C8748C701CE5853A004125DB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

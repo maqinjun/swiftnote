@@ -12,7 +12,7 @@
 @property (nonatomic, strong) NSUserDefaults *store;
 @end
 
-static NSString *const groupKey = @"com.uusafe.emm.appgroup";
+static NSString *const groupKey = @"group.com.zhizhangyi.emmcontroller";
 static NSString *const pasteboardLastValueKey = @"com.pasteboard.value.key";
 
 @implementation PersistenceUtil
@@ -23,7 +23,7 @@ static NSString *const pasteboardLastValueKey = @"com.pasteboard.value.key";
     
     dispatch_once(&once_t, ^{
         util = [PersistenceUtil new];
-        util.store = [NSUserDefaults standardUserDefaults];
+        util.store = [[NSUserDefaults alloc] initWithSuiteName:groupKey];
     });
     
     return util;
@@ -35,11 +35,11 @@ static NSString *const pasteboardLastValueKey = @"com.pasteboard.value.key";
 }
 
 - (NSString*)string{
-//     return [[PersistenceUtil shared].store objectForKey:pasteboardLastValueKey];
-    NSDate *date = [NSDate date];
+     return [[PersistenceUtil shared].store objectForKey:pasteboardLastValueKey];
+//    NSDate *date = [NSDate date];
 
 //    return [NSString stringWithFormat:@"%f", date.timeIntervalSince1970];
-    return @"from out  you";
+//    return @"from out side";
 }
 
 @end
