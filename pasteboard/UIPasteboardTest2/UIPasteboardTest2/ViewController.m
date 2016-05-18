@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 //#import "EmmLib.h"
+//#import <emmlib/emmlib.h>
 
 @interface ViewController ()
 - (IBAction)testAction:(id)sender;
@@ -26,16 +27,16 @@
     
 //    [_textFeild canPerformAction:(nonnull SEL) withSender:(nullable id)];
     
-    UIPasteboard *paste = [UIPasteboard generalPasteboard];
-//    paste.strings = @[@"test"];
-    NSLog(@"%ld", paste.changeCount);
-    [paste setValue:@"string value forKey" forKey:@"string"];
-    [paste setValue:@"string value forKeyPath" forKeyPath:@"string"];
+//    UIPasteboard *paste = [UIPasteboard generalPasteboard];
+////    paste.strings = @[@"test"];
+//    NSLog(@"%ld", paste.changeCount);
+//    [paste setValue:@"string value forKey" forKey:@"string"];
+//    [paste setValue:@"string value forKeyPath" forKeyPath:@"string"];
 //    [paste setValue:@"string value forPasteboardType" forPasteboardType:@"string"];
 //    [paste setValue:@"string value forUndefinedKey" forUndefinedKey:@"string"];
     
-    [paste valueForKey:@"string"];
-    [paste valueForKeyPath:@"string"];
+//    [paste valueForKey:@"string"];
+//    [paste valueForKeyPath:@"string"];
 //    [paste valueForUndefinedKey:@"string"];
     
 }

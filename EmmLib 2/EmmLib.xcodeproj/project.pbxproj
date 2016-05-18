@@ -9,21 +9,15 @@
 /* Begin PBXBuildFile section */
 		C855534A1CEAEB9C00C5573C /* UUPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553491CEAEB9C00C5573C /* UUPasteboard.m */; };
 		C85553531CEB027700C5573C /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553521CEB027700C5573C /* PersistenceUtil.m */; };
-		C8FA95E01CEC0868004C99F4 /* emmlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C8FA95DF1CEC0868004C99F4 /* emmlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8FA95E71CEC0868004C99F4 /* emmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA95DD1CEC0868004C99F4 /* emmlib.framework */; };
 		C8FA95EC1CEC0868004C99F4 /* emmlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA95EB1CEC0868004C99F4 /* emmlibTests.m */; };
-		C8FA95F71CEC0DEA004C99F4 /* PersistenceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C85553511CEB027700C5573C /* PersistenceUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C8FA95F81CEC0DEA004C99F4 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = F7B8DD441C86C3B500D6EC70 /* fishhook.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C8FA95FA1CEC0DEA004C99F4 /* CaptainHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F7EEAA4B1C7EF4E000F9F146 /* CaptainHook.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C8FA95FB1CEC0DEA004C99F4 /* UIPasteboardHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8FA95FC1CEC0DEA004C99F4 /* UUPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C85553481CEAEB9C00C5573C /* UUPasteboard.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C8FA95FD1CEC0E20004C99F4 /* ContactsHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C6D7A21C85670100BB9304 /* ContactsHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8FA96081CEC4ACE004C99F4 /* EmmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */; };
 		C8FA960A1CEC4B54004C99F4 /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553521CEB027700C5573C /* PersistenceUtil.m */; };
 		C8FA960B1CEC4B54004C99F4 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B8DD431C86C3B500D6EC70 /* fishhook.c */; };
 		C8FA960C1CEC4B54004C99F4 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6D7A31C85670100BB9304 /* ContactsHook.m */; };
 		C8FA960D1CEC4B54004C99F4 /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */; };
 		C8FA960E1CEC4B54004C99F4 /* UUPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553491CEAEB9C00C5573C /* UUPasteboard.m */; };
+		C8FA96241CEC526D004C99F4 /* emmlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C8FA95DF1CEC0868004C99F4 /* emmlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F70EE5F31C8D5B740000400A /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */; };
 		F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B8DD431C86C3B500D6EC70 /* fishhook.c */; };
 		F7C6D7A41C85670100BB9304 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6D7A31C85670100BB9304 /* ContactsHook.m */; };
@@ -185,13 +179,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FA95E01CEC0868004C99F4 /* emmlib.h in Headers */,
-				C8FA95FD1CEC0E20004C99F4 /* ContactsHook.h in Headers */,
-				C8FA95FB1CEC0DEA004C99F4 /* UIPasteboardHook.h in Headers */,
-				C8FA95FC1CEC0DEA004C99F4 /* UUPasteboard.h in Headers */,
-				C8FA95F81CEC0DEA004C99F4 /* fishhook.h in Headers */,
-				C8FA95FA1CEC0DEA004C99F4 /* CaptainHook.h in Headers */,
-				C8FA95F71CEC0DEA004C99F4 /* PersistenceUtil.h in Headers */,
+				C8FA96241CEC526D004C99F4 /* emmlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,12 @@
 
 static NSString *const uuPasteboardName = @"com.uusafe.emm.pasteboard";
 
+static NSRecursiveLock * lock = nil;
+
+__attribute__ ((constructor)) void curEntry(){
+    lock = [[NSRecursiveLock alloc] init];
+}
+
 CHDeclareClass(UIPasteboard);
 
 /*
@@ -81,7 +87,8 @@ CHMethod(1, void, UIPasteboard, setItems, NSArray*, items){
     NSDictionary *item = items[0];
     NSData *data = item[@"public.utf8-plain-text"];
     NSString *curString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    if (curString &&
+    if ([lock tryLock] &&
+        curString &&
         !isGeneral) {
         isGeneral = YES;
         
@@ -89,6 +96,8 @@ CHMethod(1, void, UIPasteboard, setItems, NSArray*, items){
         [PersistenceUtil shared].string = paster.string;
         
         isGeneral = NO;
+        
+        [lock unlock];
     }
     
     CHSuper(1, UIPasteboard, setItems, items);
@@ -99,11 +108,14 @@ CHMethod(0, NSString *, UIPasteboard, string)
     NSLog(@"####### HOOKED UIPasteboard string ##########");
     NSString * s = CHSuper(0, UIPasteboard, string);
     NSLog(@"string:%@", s);
-    if (!isGeneral) {
+    if ([lock tryLock]&&
+        !isGeneral) {
         isGeneral = YES;
         UIPasteboard *paster = [UIPasteboard generalPasteboard];
         NSString *generalStr = paster.string;
         isGeneral = NO;
+        
+        [lock unlock];
         
         NSString *lastStr = [PersistenceUtil shared].string;
         
@@ -119,13 +131,16 @@ CHMethod(0, NSString *, UIPasteboard, string)
 CHMethod(1, void, UIPasteboard, setString, NSString *, s) {
     NSLog(@"####### HOOKED UIPasteboard setString ##########");
     
-    if (!isGeneral) {
+    if ([lock tryLock] &&
+        !isGeneral) {
         isGeneral = YES;
         
         UIPasteboard *paster = [UIPasteboard generalPasteboard];
         [PersistenceUtil shared].string = paster.string;
         
         isGeneral = NO;
+        
+        [lock unlock];
     }
     
     CHSuper(1, UIPasteboard, setString, s);

@@ -15,13 +15,8 @@
 		C8748CBD1CE58586004125DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748CBB1CE58586004125DB /* LaunchScreen.storyboard */; };
 		C8748CC81CE58586004125DB /* UIPasteboardTest2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748CC71CE58586004125DB /* UIPasteboardTest2Tests.m */; };
 		C8748CD31CE58586004125DB /* UIPasteboardTest2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748CD21CE58586004125DB /* UIPasteboardTest2UITests.m */; };
-		C8FA9AD21CE9DA1800C03A05 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA9AC71CE9DA1800C03A05 /* ContactsHook.m */; };
-		C8FA9AD31CE9DA1800C03A05 /* EmmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA9AC91CE9DA1800C03A05 /* EmmLib.m */; };
-		C8FA9AD41CE9DA1800C03A05 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C8FA9ACB1CE9DA1800C03A05 /* fishhook.c */; };
-		C8FA9AD51CE9DA1800C03A05 /* fishhook.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C8FA9ACD1CE9DA1800C03A05 /* fishhook.podspec */; };
-		C8FA9AD61CE9DA1800C03A05 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C8FA9ACE1CE9DA1800C03A05 /* LICENSE */; };
-		C8FA9AD71CE9DA1800C03A05 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C8FA9ACF1CE9DA1800C03A05 /* README.md */; };
-		C8FA9AD81CE9DA1800C03A05 /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA9AD11CE9DA1800C03A05 /* UIPasteboardHook.m */; };
+		C8FA96201CEC5192004C99F4 /* emmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA961F1CEC5192004C99F4 /* emmlib.framework */; };
+		C8FA96221CEC51A1004C99F4 /* emmlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA961F1CEC5192004C99F4 /* emmlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C8FA96231CEC51A1004C99F4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8FA96221CEC51A1004C99F4 /* emmlib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C8748CAA1CE58586004125DB /* UIPasteboardTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPasteboardTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748CAE1CE58586004125DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,18 +67,8 @@
 		C8748CCE1CE58586004125DB /* UIPasteboardTest2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPasteboardTest2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748CD21CE58586004125DB /* UIPasteboardTest2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardTest2UITests.m; sourceTree = "<group>"; };
 		C8748CD41CE58586004125DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8FA9AC51CE9DA1800C03A05 /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
-		C8FA9AC61CE9DA1800C03A05 /* ContactsHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsHook.h; sourceTree = "<group>"; };
-		C8FA9AC71CE9DA1800C03A05 /* ContactsHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsHook.m; sourceTree = "<group>"; };
-		C8FA9AC81CE9DA1800C03A05 /* EmmLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmmLib.h; sourceTree = "<group>"; };
-		C8FA9AC91CE9DA1800C03A05 /* EmmLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmmLib.m; sourceTree = "<group>"; };
-		C8FA9ACB1CE9DA1800C03A05 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
-		C8FA9ACC1CE9DA1800C03A05 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
-		C8FA9ACD1CE9DA1800C03A05 /* fishhook.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fishhook.podspec; sourceTree = "<group>"; };
-		C8FA9ACE1CE9DA1800C03A05 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C8FA9ACF1CE9DA1800C03A05 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C8FA9AD01CE9DA1800C03A05 /* UIPasteboardHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPasteboardHook.h; sourceTree = "<group>"; };
-		C8FA9AD11CE9DA1800C03A05 /* UIPasteboardHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardHook.m; sourceTree = "<group>"; };
+		C8FA96111CEC4E88004C99F4 /* UIPasteboardTest2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UIPasteboardTest2.entitlements; sourceTree = "<group>"; };
+		C8FA961F1CEC5192004C99F4 /* emmlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = emmlib.framework; path = UIPasteboardTest2/emmlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FA96201CEC5192004C99F4 /* emmlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 		C8748CA11CE58586004125DB = {
 			isa = PBXGroup;
 			children = (
-				C8FA9AC31CE9DA1800C03A05 /* EmmLib */,
+				C8FA961F1CEC5192004C99F4 /* emmlib.framework */,
 				C8748CAC1CE58586004125DB /* UIPasteboardTest2 */,
 				C8748CC61CE58586004125DB /* UIPasteboardTest2Tests */,
 				C8748CD11CE58586004125DB /* UIPasteboardTest2UITests */,
@@ -121,6 +121,7 @@
 		C8748CAC1CE58586004125DB /* UIPasteboardTest2 */ = {
 			isa = PBXGroup;
 			children = (
+				C8FA96111CEC4E88004C99F4 /* UIPasteboardTest2.entitlements */,
 				C8748CB01CE58586004125DB /* AppDelegate.h */,
 				C8748CB11CE58586004125DB /* AppDelegate.m */,
 				C8748CB31CE58586004125DB /* ViewController.h */,
@@ -160,41 +161,6 @@
 			path = UIPasteboardTest2UITests;
 			sourceTree = "<group>";
 		};
-		C8FA9AC31CE9DA1800C03A05 /* EmmLib */ = {
-			isa = PBXGroup;
-			children = (
-				C8FA9AC41CE9DA1800C03A05 /* CaptainHook */,
-				C8FA9AC61CE9DA1800C03A05 /* ContactsHook.h */,
-				C8FA9AC71CE9DA1800C03A05 /* ContactsHook.m */,
-				C8FA9AC81CE9DA1800C03A05 /* EmmLib.h */,
-				C8FA9AC91CE9DA1800C03A05 /* EmmLib.m */,
-				C8FA9ACA1CE9DA1800C03A05 /* fishhook */,
-				C8FA9AD01CE9DA1800C03A05 /* UIPasteboardHook.h */,
-				C8FA9AD11CE9DA1800C03A05 /* UIPasteboardHook.m */,
-			);
-			path = EmmLib;
-			sourceTree = "<group>";
-		};
-		C8FA9AC41CE9DA1800C03A05 /* CaptainHook */ = {
-			isa = PBXGroup;
-			children = (
-				C8FA9AC51CE9DA1800C03A05 /* CaptainHook.h */,
-			);
-			path = CaptainHook;
-			sourceTree = "<group>";
-		};
-		C8FA9ACA1CE9DA1800C03A05 /* fishhook */ = {
-			isa = PBXGroup;
-			children = (
-				C8FA9ACB1CE9DA1800C03A05 /* fishhook.c */,
-				C8FA9ACC1CE9DA1800C03A05 /* fishhook.h */,
-				C8FA9ACD1CE9DA1800C03A05 /* fishhook.podspec */,
-				C8FA9ACE1CE9DA1800C03A05 /* LICENSE */,
-				C8FA9ACF1CE9DA1800C03A05 /* README.md */,
-			);
-			path = fishhook;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +171,7 @@
 				C8748CA61CE58586004125DB /* Sources */,
 				C8748CA71CE58586004125DB /* Frameworks */,
 				C8748CA81CE58586004125DB /* Resources */,
+				C8FA96231CEC51A1004C99F4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,10 +229,10 @@
 				TargetAttributes = {
 					C8748CA91CE58586004125DB = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = CGDYC7CLQY;
+						DevelopmentTeam = 56MY3ZN5V7;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -309,8 +276,6 @@
 				C8748CBD1CE58586004125DB /* LaunchScreen.storyboard in Resources */,
 				C8748CBA1CE58586004125DB /* Assets.xcassets in Resources */,
 				C8748CB81CE58586004125DB /* Main.storyboard in Resources */,
-				C8FA9AD51CE9DA1800C03A05 /* fishhook.podspec in Resources */,
-				C8FA9AD61CE9DA1800C03A05 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,13 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FA9AD31CE9DA1800C03A05 /* EmmLib.m in Sources */,
-				C8FA9AD81CE9DA1800C03A05 /* UIPasteboardHook.m in Sources */,
 				C8748CB51CE58586004125DB /* ViewController.m in Sources */,
-				C8FA9AD21CE9DA1800C03A05 /* ContactsHook.m in Sources */,
-				C8FA9AD71CE9DA1800C03A05 /* README.md in Sources */,
 				C8748CB21CE58586004125DB /* AppDelegate.m in Sources */,
-				C8FA9AD41CE9DA1800C03A05 /* fishhook.c in Sources */,
 				C8748CAF1CE58586004125DB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,8 +445,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = UIPasteboardTest2/UIPasteboardTest2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UIPasteboardTest2",
+				);
 				INFOPLIST_FILE = UIPasteboardTest2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -495,8 +461,9 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/UIPasteboardTest2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest2s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -504,8 +471,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = UIPasteboardTest2/UIPasteboardTest2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UIPasteboardTest2",
+				);
 				INFOPLIST_FILE = UIPasteboardTest2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,8 +487,9 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/UIPasteboardTest2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest2s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
