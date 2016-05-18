@@ -927,17 +927,6 @@ do{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 struct Animal{
     let species: String
     init?(species: String){
@@ -1054,6 +1043,43 @@ class SomeClassClosure{
         return 33
     }()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
