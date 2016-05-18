@@ -9,12 +9,37 @@
 /* Begin PBXBuildFile section */
 		C855534A1CEAEB9C00C5573C /* UUPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553491CEAEB9C00C5573C /* UUPasteboard.m */; };
 		C85553531CEB027700C5573C /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553521CEB027700C5573C /* PersistenceUtil.m */; };
+		C8FA95E01CEC0868004C99F4 /* emmlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C8FA95DF1CEC0868004C99F4 /* emmlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8FA95E71CEC0868004C99F4 /* emmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA95DD1CEC0868004C99F4 /* emmlib.framework */; };
+		C8FA95EC1CEC0868004C99F4 /* emmlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA95EB1CEC0868004C99F4 /* emmlibTests.m */; };
+		C8FA95F71CEC0DEA004C99F4 /* PersistenceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C85553511CEB027700C5573C /* PersistenceUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C8FA95F81CEC0DEA004C99F4 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = F7B8DD441C86C3B500D6EC70 /* fishhook.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C8FA95FA1CEC0DEA004C99F4 /* CaptainHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F7EEAA4B1C7EF4E000F9F146 /* CaptainHook.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C8FA95FB1CEC0DEA004C99F4 /* UIPasteboardHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8FA95FC1CEC0DEA004C99F4 /* UUPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C85553481CEAEB9C00C5573C /* UUPasteboard.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C8FA95FD1CEC0E20004C99F4 /* ContactsHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C6D7A21C85670100BB9304 /* ContactsHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8FA96081CEC4ACE004C99F4 /* EmmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */; };
+		C8FA960A1CEC4B54004C99F4 /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553521CEB027700C5573C /* PersistenceUtil.m */; };
+		C8FA960B1CEC4B54004C99F4 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B8DD431C86C3B500D6EC70 /* fishhook.c */; };
+		C8FA960C1CEC4B54004C99F4 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6D7A31C85670100BB9304 /* ContactsHook.m */; };
+		C8FA960D1CEC4B54004C99F4 /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */; };
+		C8FA960E1CEC4B54004C99F4 /* UUPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553491CEAEB9C00C5573C /* UUPasteboard.m */; };
 		F70EE5F31C8D5B740000400A /* UIPasteboardHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */; };
 		F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B8DD431C86C3B500D6EC70 /* fishhook.c */; };
 		F7C6D7A41C85670100BB9304 /* ContactsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6D7A31C85670100BB9304 /* ContactsHook.m */; };
 		F7EEAA2E1C7EEE4E00F9F146 /* EmmLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7EEAA2D1C7EEE4E00F9F146 /* EmmLib.h */; };
 		F7EEAA301C7EEE4E00F9F146 /* EmmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8FA95E81CEC0868004C99F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7EEAA221C7EEE4E00F9F146 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8FA95DC1CEC0868004C99F4;
+			remoteInfo = emmlib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F7EEAA281C7EEE4E00F9F146 /* CopyFiles */ = {
@@ -34,6 +59,12 @@
 		C85553491CEAEB9C00C5573C /* UUPasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPasteboard.m; sourceTree = "<group>"; };
 		C85553511CEB027700C5573C /* PersistenceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceUtil.h; sourceTree = "<group>"; };
 		C85553521CEB027700C5573C /* PersistenceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceUtil.m; sourceTree = "<group>"; };
+		C8FA95DD1CEC0868004C99F4 /* emmlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = emmlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8FA95DF1CEC0868004C99F4 /* emmlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emmlib.h; sourceTree = "<group>"; };
+		C8FA95E11CEC0868004C99F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8FA95E61CEC0868004C99F4 /* emmlibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emmlibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8FA95EB1CEC0868004C99F4 /* emmlibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = emmlibTests.m; sourceTree = "<group>"; };
+		C8FA95ED1CEC0868004C99F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPasteboardHook.h; sourceTree = "<group>"; };
 		F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardHook.m; sourceTree = "<group>"; };
 		F7B8DD431C86C3B500D6EC70 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
@@ -47,6 +78,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C8FA95D91CEC0868004C99F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FA95E31CEC0868004C99F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FA95E71CEC0868004C99F4 /* emmlib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7EEAA271C7EEE4E00F9F146 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,10 +112,30 @@
 			path = persistence;
 			sourceTree = "<group>";
 		};
+		C8FA95DE1CEC0868004C99F4 /* emmlib */ = {
+			isa = PBXGroup;
+			children = (
+				C8FA95DF1CEC0868004C99F4 /* emmlib.h */,
+				C8FA95E11CEC0868004C99F4 /* Info.plist */,
+			);
+			path = emmlib;
+			sourceTree = "<group>";
+		};
+		C8FA95EA1CEC0868004C99F4 /* emmlibTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8FA95EB1CEC0868004C99F4 /* emmlibTests.m */,
+				C8FA95ED1CEC0868004C99F4 /* Info.plist */,
+			);
+			path = emmlibTests;
+			sourceTree = "<group>";
+		};
 		F7EEAA211C7EEE4E00F9F146 = {
 			isa = PBXGroup;
 			children = (
 				F7EEAA2C1C7EEE4E00F9F146 /* EmmLib */,
+				C8FA95DE1CEC0868004C99F4 /* emmlib */,
+				C8FA95EA1CEC0868004C99F4 /* emmlibTests */,
 				F7EEAA2B1C7EEE4E00F9F146 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				F7EEAA2A1C7EEE4E00F9F146 /* EmmLib.dylib */,
+				C8FA95DD1CEC0868004C99F4 /* emmlib.framework */,
+				C8FA95E61CEC0868004C99F4 /* emmlibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +180,60 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C8FA95DA1CEC0868004C99F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FA95E01CEC0868004C99F4 /* emmlib.h in Headers */,
+				C8FA95FD1CEC0E20004C99F4 /* ContactsHook.h in Headers */,
+				C8FA95FB1CEC0DEA004C99F4 /* UIPasteboardHook.h in Headers */,
+				C8FA95FC1CEC0DEA004C99F4 /* UUPasteboard.h in Headers */,
+				C8FA95F81CEC0DEA004C99F4 /* fishhook.h in Headers */,
+				C8FA95FA1CEC0DEA004C99F4 /* CaptainHook.h in Headers */,
+				C8FA95F71CEC0DEA004C99F4 /* PersistenceUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		C8FA95DC1CEC0868004C99F4 /* emmlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8FA95F21CEC0868004C99F4 /* Build configuration list for PBXNativeTarget "emmlib" */;
+			buildPhases = (
+				C8FA95D81CEC0868004C99F4 /* Sources */,
+				C8FA95D91CEC0868004C99F4 /* Frameworks */,
+				C8FA95DA1CEC0868004C99F4 /* Headers */,
+				C8FA95DB1CEC0868004C99F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = emmlib;
+			productName = emmlib;
+			productReference = C8FA95DD1CEC0868004C99F4 /* emmlib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8FA95E51CEC0868004C99F4 /* emmlibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8FA95F31CEC0868004C99F4 /* Build configuration list for PBXNativeTarget "emmlibTests" */;
+			buildPhases = (
+				C8FA95E21CEC0868004C99F4 /* Sources */,
+				C8FA95E31CEC0868004C99F4 /* Frameworks */,
+				C8FA95E41CEC0868004C99F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8FA95E91CEC0868004C99F4 /* PBXTargetDependency */,
+			);
+			name = emmlibTests;
+			productName = emmlibTests;
+			productReference = C8FA95E61CEC0868004C99F4 /* emmlibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F7EEAA291C7EEE4E00F9F146 /* EmmLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7EEAA331C7EEE4E00F9F146 /* Build configuration list for PBXNativeTarget "EmmLib" */;
@@ -139,6 +260,13 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = uusafe;
 				TargetAttributes = {
+					C8FA95DC1CEC0868004C99F4 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 56MY3ZN5V7;
+					};
+					C8FA95E51CEC0868004C99F4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					F7EEAA291C7EEE4E00F9F146 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = CGDYC7CLQY;
@@ -158,11 +286,51 @@
 			projectRoot = "";
 			targets = (
 				F7EEAA291C7EEE4E00F9F146 /* EmmLib */,
+				C8FA95DC1CEC0868004C99F4 /* emmlib */,
+				C8FA95E51CEC0868004C99F4 /* emmlibTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		C8FA95DB1CEC0868004C99F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FA95E41CEC0868004C99F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		C8FA95D81CEC0868004C99F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FA960A1CEC4B54004C99F4 /* PersistenceUtil.m in Sources */,
+				C8FA960B1CEC4B54004C99F4 /* fishhook.c in Sources */,
+				C8FA960C1CEC4B54004C99F4 /* ContactsHook.m in Sources */,
+				C8FA960D1CEC4B54004C99F4 /* UIPasteboardHook.m in Sources */,
+				C8FA960E1CEC4B54004C99F4 /* UUPasteboard.m in Sources */,
+				C8FA96081CEC4ACE004C99F4 /* EmmLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FA95E21CEC0868004C99F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FA95EC1CEC0868004C99F4 /* emmlibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7EEAA261C7EEE4E00F9F146 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,7 +346,99 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C8FA95E91CEC0868004C99F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8FA95DC1CEC0868004C99F4 /* emmlib */;
+			targetProxy = C8FA95E81CEC0868004C99F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C8FA95EE1CEC0868004C99F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = emmlib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uusafe.emmlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C8FA95EF1CEC0868004C99F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = emmlib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uusafe.emmlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8FA95F01CEC0868004C99F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = emmlibTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uusafe.emmlibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8FA95F11CEC0868004C99F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = emmlibTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uusafe.emmlibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F7EEAA311C7EEE4E00F9F146 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -196,7 +456,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -219,8 +480,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "169d2d9c-6d67-41b5-a994-c65aef1dde42";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -241,7 +503,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -257,20 +520,23 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "169d2d9c-6d67-41b5-a994-c65aef1dde42";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
 		F7EEAA341C7EEE4E00F9F146 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: maqj@zhizhangyi.com (MFLE5QL398)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: maqj@zhizhangyi.com (MFLE5QL398)";
 				INSTALL_PATH = "@executable_path/";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "169d2d9c-6d67-41b5-a994-c65aef1dde42";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -278,12 +544,13 @@
 		F7EEAA351C7EEE4E00F9F146 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: maqj@zhizhangyi.com (MFLE5QL398)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: maqj@zhizhangyi.com (MFLE5QL398)";
 				INSTALL_PATH = "@executable_path/";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "169d2d9c-6d67-41b5-a994-c65aef1dde42";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -291,6 +558,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C8FA95F21CEC0868004C99F4 /* Build configuration list for PBXNativeTarget "emmlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8FA95EE1CEC0868004C99F4 /* Debug */,
+				C8FA95EF1CEC0868004C99F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C8FA95F31CEC0868004C99F4 /* Build configuration list for PBXNativeTarget "emmlibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8FA95F01CEC0868004C99F4 /* Debug */,
+				C8FA95F11CEC0868004C99F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F7EEAA251C7EEE4E00F9F146 /* Build configuration list for PBXProject "EmmLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

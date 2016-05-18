@@ -1,0 +1,6 @@
+framework module emmlib {
+  umbrella header "emmlib.h"
+
+  export *
+  module * { export * }
+}

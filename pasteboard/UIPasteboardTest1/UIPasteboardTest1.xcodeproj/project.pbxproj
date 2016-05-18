@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C855534F1CEAFF0F00C5573C /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = C855534E1CEAFF0F00C5573C /* test.png */; };
-		C85553981CEB080000C5573C /* EmmLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C85553941CEB080000C5573C /* EmmLib.dylib */; };
-		C85553991CEB080500C5573C /* EmmLib.dylib in Resources */ = {isa = PBXBuildFile; fileRef = C85553941CEB080000C5573C /* EmmLib.dylib */; };
 		C8748C701CE5853A004125DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C6F1CE5853A004125DB /* main.m */; };
 		C8748C731CE5853A004125DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C721CE5853A004125DB /* AppDelegate.m */; };
 		C8748C761CE5853A004125DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C751CE5853A004125DB /* ViewController.m */; };
@@ -18,6 +16,8 @@
 		C8748C7E1CE5853A004125DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748C7C1CE5853A004125DB /* LaunchScreen.storyboard */; };
 		C8748C891CE5853A004125DB /* UIPasteboardTest1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C881CE5853A004125DB /* UIPasteboardTest1Tests.m */; };
 		C8748C941CE5853A004125DB /* UIPasteboardTest1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C931CE5853A004125DB /* UIPasteboardTest1UITests.m */; };
+		C8FA96061CEC4AA4004C99F4 /* emmlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA96051CEC4AA4004C99F4 /* emmlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C8FA96071CEC4AB5004C99F4 /* emmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA96051CEC4AA4004C99F4 /* emmlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +37,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C8FA96041CEC19B3004C99F4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8FA96061CEC4AA4004C99F4 /* emmlib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C82ACA5A1CEB1E8500A4C9BE /* UIPasteboardTest1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UIPasteboardTest1.entitlements; sourceTree = "<group>"; };
 		C855534E1CEAFF0F00C5573C /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		C85553941CEB080000C5573C /* EmmLib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = EmmLib.dylib; sourceTree = "<group>"; };
-		C85553971CEB080000C5573C /* EmmLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmmLib.h; sourceTree = "<group>"; };
 		C8748C6B1CE58539004125DB /* UIPasteboardTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPasteboardTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748C6F1CE5853A004125DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8748C711CE5853A004125DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +70,7 @@
 		C8748C8F1CE5853A004125DB /* UIPasteboardTest1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPasteboardTest1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748C931CE5853A004125DB /* UIPasteboardTest1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPasteboardTest1UITests.m; sourceTree = "<group>"; };
 		C8748C951CE5853A004125DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8FA96051CEC4AA4004C99F4 /* emmlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = emmlib.framework; path = UIPasteboardTest1/emmlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C85553981CEB080000C5573C /* EmmLib.dylib in Frameworks */,
+				C8FA96071CEC4AB5004C99F4 /* emmlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,27 +99,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C85553951CEB080000C5573C /* include */ = {
-			isa = PBXGroup;
-			children = (
-				C85553961CEB080000C5573C /* EmmLib */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		C85553961CEB080000C5573C /* EmmLib */ = {
-			isa = PBXGroup;
-			children = (
-				C85553971CEB080000C5573C /* EmmLib.h */,
-			);
-			path = EmmLib;
-			sourceTree = "<group>";
-		};
 		C8748C621CE58539004125DB = {
 			isa = PBXGroup;
 			children = (
-				C85553941CEB080000C5573C /* EmmLib.dylib */,
-				C85553951CEB080000C5573C /* include */,
+				C8FA96051CEC4AA4004C99F4 /* emmlib.framework */,
 				C855534E1CEAFF0F00C5573C /* test.png */,
 				C8748C6D1CE5853A004125DB /* UIPasteboardTest1 */,
 				C8748C871CE5853A004125DB /* UIPasteboardTest1Tests */,
@@ -127,6 +124,7 @@
 		C8748C6D1CE5853A004125DB /* UIPasteboardTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				C82ACA5A1CEB1E8500A4C9BE /* UIPasteboardTest1.entitlements */,
 				C8748C711CE5853A004125DB /* AppDelegate.h */,
 				C8748C721CE5853A004125DB /* AppDelegate.m */,
 				C8748C741CE5853A004125DB /* ViewController.h */,
@@ -176,6 +174,7 @@
 				C8748C671CE58539004125DB /* Sources */,
 				C8748C681CE58539004125DB /* Frameworks */,
 				C8748C691CE58539004125DB /* Resources */,
+				C8FA96041CEC19B3004C99F4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +232,12 @@
 				TargetAttributes = {
 					C8748C6A1CE58539004125DB = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = CGDYC7CLQY;
+						DevelopmentTeam = 56MY3ZN5V7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C8748C831CE5853A004125DB = {
 						CreatedOnToolsVersion = 7.3;
@@ -272,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C85553991CEB080500C5573C /* EmmLib.dylib in Resources */,
 				C8748C7E1CE5853A004125DB /* LaunchScreen.storyboard in Resources */,
 				C8748C7B1CE5853A004125DB /* Assets.xcassets in Resources */,
 				C8748C791CE5853A004125DB /* Main.storyboard in Resources */,
@@ -436,6 +439,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -446,8 +450,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = UIPasteboardTest1/UIPasteboardTest1.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UIPasteboardTest1",
+				);
 				INFOPLIST_FILE = UIPasteboardTest1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -455,7 +465,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest1s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -465,8 +475,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = UIPasteboardTest1/UIPasteboardTest1.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UIPasteboardTest1",
+				);
 				INFOPLIST_FILE = UIPasteboardTest1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,7 +490,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maqj.UIPasteboardTest1s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

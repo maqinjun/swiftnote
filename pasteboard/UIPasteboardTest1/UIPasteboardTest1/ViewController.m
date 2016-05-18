@@ -6,8 +6,8 @@
 //  Copyright © 2016 maqj. All rights reserved.
 //
 
-#import "EmmLib.h"
 #import "ViewController.h"
+//#import <emmlib/emmlib.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelText;
@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    [EmmLib pasteboardHookEnable:YES];
+//    [UIPasteboardHook hook];
+//    [EmmLib pasteboardHookEnable:YES];
     
 //    NSLog(@"%@", UIPasteboardNameGeneral);
 //    NSLog(@"%@", UIPasteboardNameFind);
@@ -29,6 +29,12 @@
 //    paster.string = @"string to test2";
 //
 //    paster.image = [UIImage imageNamed:@"test.png"];
+    
+    UIPasteboard *generalPaster = [UIPasteboard generalPasteboard];
+    
+    UIPasteboard *paster = [UIPasteboard pasteboardWithUniqueName];
+    paster.URL = [NSURL URLWithString:@"www.baidu.com"];
+    NSLog(@"%@, %d, %d", paster.URL, paster.persistent, generalPaster.persistent);
 }
 
 - (void)didReceiveMemoryWarning {
