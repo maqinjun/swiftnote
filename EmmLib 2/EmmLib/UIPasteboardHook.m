@@ -77,6 +77,22 @@ CHMethod(1, void, UIPasteboard, setImage, UIImage*, image){
     CHSuper(1, UIPasteboard, setImage, image);
 }
 
+CHMethod(0, NSArray*, UIPasteboard, images){
+    
+    NSLog(@"####### HOOKED UIPasteboard images ##########");
+
+    NSArray *arr = CHSuper(0, UIPasteboard, images);
+    return arr;
+}
+
+CHMethod(1, void, UIPasteboard, setImages, NSArray*, images){
+    
+    NSLog(@"####### HOOKED UIPasteboard setImages ##########");
+
+    CHSuper(1, UIPasteboard, setImages, images);
+}
+
+
 CHMethod(0, NSArray*, UIPasteboard, items){
     NSArray *thisItems = CHSuper(0, UIPasteboard, items);
     NSLog(@"####### HOOKED UIPasteboard, %s, %@", __FUNCTION__, thisItems);
@@ -136,16 +152,116 @@ CHMethod(1, void, UIPasteboard, setString, NSString *, s) {
     if ([lock tryLock] &&
         !isGeneral) {
         isGeneral = YES;
-        
         UIPasteboard *paster = [UIPasteboard generalPasteboard];
         [PersistenceUtil shared].string = paster.string;
-        
         isGeneral = NO;
-        
         [lock unlock];
     }
     
     CHSuper(1, UIPasteboard, setString, s);
+}
+
+CHMethod(0, NSArray*, UIPasteboard, strings){
+    
+    NSLog(@"####### HOOKED UIPasteboard strings ##########");
+
+    NSArray *arr = CHSuper(0, UIPasteboard, strings);
+    
+    if ([lock tryLock] &&
+        !isGeneral) {
+        isGeneral = YES;
+        UIPasteboard *paster = [UIPasteboard generalPasteboard];
+        NSArray *generalStrings = paster.strings;
+        isGeneral = NO;
+        
+        [lock unlock];
+        
+        NSArray *lastStrings = [PersistenceUtil shared].strings;
+        
+        if ([generalStrings isEqualToArray:lastStrings]) {
+            return arr;
+        }else{
+            return generalStrings;
+        }
+    }
+    
+    return arr;
+}
+
+CHMethod(1, void, UIPasteboard, setStrings, NSArray*, strings){
+    
+    NSLog(@"####### HOOKED UIPasteboard setStrings ##########");
+
+    if ([lock tryLock] &&
+        !isGeneral) {
+        isGeneral = YES;
+        UIPasteboard *paster = [UIPasteboard generalPasteboard];
+        [PersistenceUtil shared].strings = paster.strings;
+        isGeneral = NO;
+        [lock unlock];
+    }
+    
+    CHSuper(1, UIPasteboard, setStrings, strings);
+}
+
+CHMethod(0, NSURL*, UIPasteboard, URL){
+    
+    NSLog(@"####### HOOKED UIPasteboard URL ##########");
+
+    NSURL *thisUrl = CHSuper(0, UIPasteboard, URL);
+    return thisUrl;
+}
+
+CHMethod(1, void, UIPasteboard, setURL, NSURL*, url){
+    
+    NSLog(@"####### HOOKED UIPasteboard setURL ##########");
+
+    CHSuper(1, UIPasteboard, setURL, url);
+}
+
+CHMethod(0, NSArray*, UIPasteboard, URLs){
+    
+    NSLog(@"####### HOOKED UIPasteboard URLs ##########");
+
+    NSArray *arr = CHSuper(0, UIPasteboard, URLs);
+    return arr;
+}
+
+CHMethod(1, void, UIPasteboard, setURLs, NSArray*, urls){
+    
+    NSLog(@"####### HOOKED UIPasteboard setURLs ##########");
+
+    CHSuper(1, UIPasteboard, setURLs, urls);
+}
+
+CHMethod(0, UIColor*, UIPasteboard, color){
+    
+    NSLog(@"####### HOOKED UIPasteboard color ##########");
+
+    UIColor *color = CHSuper(0, UIPasteboard, color);
+    return color;
+}
+
+CHMethod(1, void, UIPasteboard, setColor, UIColor*, color){
+    
+    NSLog(@"####### HOOKED UIPasteboard setColor ##########");
+
+    CHSuper(1, UIPasteboard, setColor, color);
+}
+
+CHMethod(0, NSArray*, UIPasteboard, colors){
+    
+    NSLog(@"####### HOOKED UIPasteboard colors ##########");
+
+    NSArray *arr = CHSuper(0, UIPasteboard, colors);
+    return arr;
+}
+
+CHMethod(1, void, UIPasteboard, setColors, NSArray*, colors){
+    
+    NSLog(@"####### HOOKED UIPasteboard setColors ##########");
+
+    CHSuper(1, UIPasteboard, setColors, colors);
 }
 
 /*
@@ -175,9 +291,15 @@ BOOL isGeneral = NO;
     CHHook(2, UIPasteboard, setData, forPasteboardType);
     CHHook(2, UIPasteboard, setValue, forPasteboardType);
     CHHookProperty(UIPasteboard, string, setString);
-    CHHookProperty(UIPasteboard, items, setItems);
+    CHHookProperty(UIPasteboard, strings, setStrings);
     CHHookProperty(UIPasteboard, image, setImage);
-    
+    CHHookProperty(UIPasteboard, images, setImages);
+    CHHookProperty(UIPasteboard, URL, setURL);
+    CHHookProperty(UIPasteboard, URLs, setURLs);
+    CHHookProperty(UIPasteboard, color, setColor);
+    CHHookProperty(UIPasteboard, colors, setColors);
+    CHHookProperty(UIPasteboard, items, setItems);
+
     CHClassHook(0, UIPasteboard, generalPasteboard);
     CHClassHook(0, UIPasteboard, pasteboardWithUniqueName);
     CHClassHook(2, UIPasteboard, pasteboardWithName, create);
