@@ -30,11 +30,13 @@
 //
 //    paster.image = [UIImage imageNamed:@"test.png"];
     
-//    UIPasteboard *generalPaster = [UIPasteboard generalPasteboard];
-//    
-//    UIPasteboard *paster = [UIPasteboard pasteboardWithUniqueName];
-//    paster.URL = [NSURL URLWithString:@"www.baidu.com"];
-//    NSLog(@"%@, %d, %d", paster.URL, paster.persistent, generalPaster.persistent);
+    UIPasteboard *generalPaster = [UIPasteboard generalPasteboard];
+
+    UIPasteboard *paster = [UIPasteboard pasteboardWithUniqueName];
+    paster.URL = [NSURL URLWithString:@"www.baidu.com"];
+    NSLog(@"%@, %d, %d", paster.URL, paster.persistent, generalPaster.persistent);
+    
+    generalPaster.persistent = YES;
 }
 
 - (void)didReceiveMemoryWarning {

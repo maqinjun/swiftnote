@@ -55,7 +55,9 @@ CHClassMethod(2, UIPasteboard*, UIPasteboard, pasteboardWithName, NSString*, pas
         return CHSuper(2, UIPasteboard, pasteboardWithName, pasteboardName, create, isCreate);
     }
     
-    return CHSuper(2, UIPasteboard, pasteboardWithName, uuPasteboardName, create, isCreate);
+    UIPasteboard *pasteboard = CHSuper(2, UIPasteboard, pasteboardWithName, uuPasteboardName, create, isCreate);
+    pasteboard.persistent = YES;
+    return pasteboard;
 }
 
 /*
