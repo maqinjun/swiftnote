@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C81CBBAF1CED7FB9006EA56D /* test.strings in Resources */ = {isa = PBXBuildFile; fileRef = C81CBBAE1CED7FB9006EA56D /* test.strings */; };
+		C81CBC1F1CEEB688006EA56D /* UIiCloudSyncHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBC1E1CEEB688006EA56D /* UIiCloudSyncHook.m */; };
+		C81CBC201CEEBBB1006EA56D /* UIiCloudSyncHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBC1E1CEEB688006EA56D /* UIiCloudSyncHook.m */; };
 		C85553531CEB027700C5573C /* PersistenceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C85553521CEB027700C5573C /* PersistenceUtil.m */; };
 		C8FA95E71CEC0868004C99F4 /* emmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA95DD1CEC0868004C99F4 /* emmlib.framework */; };
 		C8FA95EC1CEC0868004C99F4 /* emmlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA95EB1CEC0868004C99F4 /* emmlibTests.m */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		C81CBBAE1CED7FB9006EA56D /* test.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = test.strings; sourceTree = "<group>"; };
+		C81CBC1D1CEEB688006EA56D /* UIiCloudSyncHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIiCloudSyncHook.h; sourceTree = "<group>"; };
+		C81CBC1E1CEEB688006EA56D /* UIiCloudSyncHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIiCloudSyncHook.m; sourceTree = "<group>"; };
 		C85553511CEB027700C5573C /* PersistenceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceUtil.h; sourceTree = "<group>"; };
 		C85553521CEB027700C5573C /* PersistenceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceUtil.m; sourceTree = "<group>"; };
 		C8FA95DD1CEC0868004C99F4 /* emmlib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = emmlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +160,8 @@
 				F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */,
 				F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */,
 				F70EE5F21C8D5B740000400A /* UIPasteboardHook.m */,
+				C81CBC1D1CEEB688006EA56D /* UIiCloudSyncHook.h */,
+				C81CBC1E1CEEB688006EA56D /* UIiCloudSyncHook.m */,
 			);
 			path = EmmLib;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81CBC201CEEBBB1006EA56D /* UIiCloudSyncHook.m in Sources */,
 				C8FA960A1CEC4B54004C99F4 /* PersistenceUtil.m in Sources */,
 				C8FA960B1CEC4B54004C99F4 /* fishhook.c in Sources */,
 				C8FA960C1CEC4B54004C99F4 /* ContactsHook.m in Sources */,
@@ -325,6 +332,7 @@
 				F7B8DD451C86C3B500D6EC70 /* fishhook.c in Sources */,
 				C85553531CEB027700C5573C /* PersistenceUtil.m in Sources */,
 				F7EEAA301C7EEE4E00F9F146 /* EmmLib.m in Sources */,
+				C81CBC1F1CEEB688006EA56D /* UIiCloudSyncHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +370,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -391,7 +399,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

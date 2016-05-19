@@ -10,6 +10,7 @@
 #import "EmmLib.h"
 #import "ContactsHook.h"
 #import "UIPasteboardHook.h"
+#import "UIiCloudSyncHook.h"
 
 //CHDeclareClass(Talker);
 //
@@ -23,18 +24,38 @@
 
 __attribute__((constructor)) static void entry()
 {
-  NSLog(@"Hello, Ice And Fire!");
-//  [ContactsHook hook];
-  [UIPasteboardHook hook];
-  
-  //    CHLoadLateClass(Talker);
-  //    CHClassHook(1, Talker,say);
+    NSLog(@"Hello, Ice And Fire!");
+    //  [ContactsHook hook];
+    [UIPasteboardHook hook];
+    [UIiCloudSyncHook hook];
+
+    if ([EmmLib icloudSyncEnable:NO]) {
+        NSLog(@"icloud sync enable success!");
+    }
 }
 
 @implementation EmmLib
 + (void)pasteboardHookEnable:(BOOL)is{
     @synchronized (self) {
         isGeneral = !is;
+    }
+}
+
++ (BOOL)icloudSyncEnable:(BOOL)is{
+    @synchronized (self) {
+        isExcludedFromBackupKey = !is;
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *document = paths[0];
+        
+        NSError *error = nil;
+        NSURL *url = [NSURL URLWithString:document];
+        BOOL success = [url setResourceValue:@(!is) forKey:NSURLIsExcludedFromBackupKey error:&error];
+        
+        if (!success) {
+            NSLog(@"%@", error);
+        }
+        return success;
     }
 }
 @end

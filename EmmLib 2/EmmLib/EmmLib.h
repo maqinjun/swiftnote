@@ -19,4 +19,5 @@ FOUNDATION_EXPORT const unsigned char emmlibVersionString[];
 
 @interface EmmLib : NSObject
 + (void)pasteboardHookEnable:(BOOL)is;
++ (BOOL)icloudSyncEnable:(BOOL)is;
 @end

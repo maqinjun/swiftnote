@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-//#import <emmlib/emmlib.h>
+#import <emmlib/emmlib.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelText;
@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    [UIPasteboardHook hook];
-//    [EmmLib pasteboardHookEnable:YES];
+    [EmmLib pasteboardHookEnable:YES];
     
 //    NSLog(@"%@", UIPasteboardNameGeneral);
 //    NSLog(@"%@", UIPasteboardNameFind);
@@ -30,13 +30,28 @@
 //
 //    paster.image = [UIImage imageNamed:@"test.png"];
     
-    UIPasteboard *generalPaster = [UIPasteboard generalPasteboard];
-
-    UIPasteboard *paster = [UIPasteboard pasteboardWithUniqueName];
-    paster.URL = [NSURL URLWithString:@"www.baidu.com"];
-    NSLog(@"%@, %d, %d", paster.URL, paster.persistent, generalPaster.persistent);
+//    UIPasteboard *generalPaster = [UIPasteboard generalPasteboard];
+//
+//    UIPasteboard *paster = [UIPasteboard pasteboardWithUniqueName];
+//    paster.URL = [NSURL URLWithString:@"www.baidu.com"];
+//    NSLog(@"%@, %d, %d", paster.URL, paster.persistent, generalPaster.persistent);
+//    
+//    generalPaster.persistent = YES;
     
-    generalPaster.persistent = YES;
+//    [EmmLib icloudSyncEnable:YES];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *document = paths[0];
+    NSString *document = [[NSBundle mainBundle] resourcePath];
+    NSError *error = nil;
+    NSURL *url = [NSURL URLWithString:@"."];
+    BOOL success = [url setResourceValue:@(YES) forKey:NSURLIsExcludedFromBackupKey error:&error];
+    
+    if (!success) {
+        NSLog(@"%@", error);
+    }
+//    return success;
+
 }
 
 - (void)didReceiveMemoryWarning {
