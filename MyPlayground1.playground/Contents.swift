@@ -6,6 +6,7 @@ import UIKit
 /*
   Nested Types.
  */
+let a = 2 + 3
 
 struct BlackjackCard {
     enum Suit: Character {
@@ -869,14 +870,104 @@ print("The number of edits is \(stringToEdit.numberOfEdits)")
 print(stringToEdit.value)
 
 
+public class SomePublicClass{
+    public var somePublicProperty = 0
+    var someInternalProperty = 0
+    private func somePrivateMethod(){}
+}
+
+class SomeInternalClass{
+    var someInternalProperty = 0
+    private func somePrivateMethod(){}
+}
+
+private class SomePrivateClass{
+    var somePrivateProperty = 0
+    func somePrivateMehtod() {
+    }
+}
+
+private func someFunction() -> (SomeInternalClass, SomePrivateClass){
+    return (SomeInternalClass(), SomePrivateClass())
+}
 
 
+var potentialOverflow = Int16.max
+potentialOverflow = potentialOverflow &+ 1
+
+var potentialOverflow1 = potentialOverflow &* 2
 
 
+struct Vector2D {
+    var x = 0.0, y = 0.0
+}
+
+func + (left: Vector2D, right: Vector2D) -> Vector2D{
+    return Vector2D(x: left.x + right.x, y: left.y + right.y)
+}
+
+let vector = Vector2D(x: 3, y: 1)
+let anotherVector = Vector2D(x: 2.0, y: 4.0)
+let combineVector = vector + anotherVector
 
 
+prefix func - (vector: Vector2D) -> Vector2D{
+    return Vector2D(x: -vector.x, y: -vector.y)
+}
 
+let positive = Vector2D(x: 3.0, y: 5.0)
+let negative = -positive
+let alsoPositive = -negative
 
+func += (inout left: Vector2D, right: Vector2D){
+    left = left + right
+}
+
+func == (left: Vector2D, right: Vector2D) -> Bool{
+    return (left.x == right.x) && (left.y == right.y)
+}
+
+func != (left: Vector2D, right: Vector2D) -> Bool{
+    return !(left == right)
+}
+
+let twoThree = Vector2D(x: 2.0, y: 4.0)
+let anotherTwoThree = Vector2D(x: 4.0, y: 5.0)
+if twoThree == anotherTwoThree{
+    print("These two vectors are equivalent.")
+}
+
+prefix operator +++ {}
+postfix operator +++ {}
+infix operator +++ {}
+infix operator +- { associativity left precedence 140}
+
+prefix func +++ (inout vector: Vector2D) -> Vector2D{
+    vector += vector
+    return vector
+}
+
+postfix func +++ (inout vector: Vector2D) -> Vector2D{
+    vector += vector
+    return vector
+}
+
+func +++ (left: Vector2D, right: Vector2D) -> Vector2D{
+    return Vector2D(x: left.x + right.x, y: left.y + right.y)
+}
+
+func +- (left: Vector2D, right: Vector2D) -> Vector2D{
+    return Vector2D(x: left.x + right.x, y: left.y - right.y)
+}
+
+var toBeDoubled = Vector2D(x: 1.0, y: 4.0)
+let afterDoubling = +++toBeDoubled
+let rithDoubling = toBeDoubled+++
+let arDoubling = toBeDoubled +++ toBeDoubled
+
+let firstVector = Vector2D(x: 1.0, y: 3.0)
+let secondVector = Vector2D(x: 3.0, y: 4.0)
+let plusMinusVector = firstVector  +-  secondVector
 
 
 
