@@ -11,6 +11,7 @@
 #import "ContactsHook.h"
 #import "UIPasteboardHook.h"
 #import "UIiCloudSyncHook.h"
+#import <sys/xattr.h>
 
 //CHDeclareClass(Talker);
 //
@@ -31,6 +32,8 @@ __attribute__((constructor)) static void entry()
 
     if ([EmmLib icloudSyncEnable:NO]) {
         NSLog(@"icloud sync enable success!");
+    }else{
+        NSLog(@"icloud sync enable failed!");
     }
 }
 
@@ -44,18 +47,7 @@ __attribute__((constructor)) static void entry()
 + (BOOL)icloudSyncEnable:(BOOL)is{
     @synchronized (self) {
         isExcludedFromBackupKey = !is;
-        
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *document = paths[0];
-        
-        NSError *error = nil;
-        NSURL *url = [NSURL URLWithString:document];
-        BOOL success = [url setResourceValue:@(!is) forKey:NSURLIsExcludedFromBackupKey error:&error];
-        
-        if (!success) {
-            NSLog(@"%@", error);
-        }
-        return success;
+        return [UIiCloudSyncHook addNotBackUpiCloud];
     }
 }
 @end

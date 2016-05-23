@@ -150,12 +150,12 @@
 		F7EEAA2C1C7EEE4E00F9F146 /* EmmLib */ = {
 			isa = PBXGroup;
 			children = (
+				F7EEAA4C1C7EF4F400F9F146 /* CaptainHook */,
 				C85553501CEB027700C5573C /* persistence */,
 				F7B8DD431C86C3B500D6EC70 /* fishhook.c */,
 				F7B8DD441C86C3B500D6EC70 /* fishhook.h */,
 				F7C6D7A21C85670100BB9304 /* ContactsHook.h */,
 				F7C6D7A31C85670100BB9304 /* ContactsHook.m */,
-				F7EEAA4C1C7EF4F400F9F146 /* CaptainHook */,
 				F7EEAA2D1C7EEE4E00F9F146 /* EmmLib.h */,
 				F7EEAA2F1C7EEE4E00F9F146 /* EmmLib.m */,
 				F70EE5F11C8D5B740000400A /* UIPasteboardHook.h */,

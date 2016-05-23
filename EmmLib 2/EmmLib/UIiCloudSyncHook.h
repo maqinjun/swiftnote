@@ -12,4 +12,5 @@ extern BOOL isExcludedFromBackupKey;
 
 @interface UIiCloudSyncHook : NSObject
 + (void)hook;
++ (BOOL)addNotBackUpiCloud;
 @end
