@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C850B11F1CF545BB00AC2968 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C850B11E1CF545BB00AC2968 /* CloudKit.framework */; };
 		C855534F1CEAFF0F00C5573C /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = C855534E1CEAFF0F00C5573C /* test.png */; };
 		C8748C701CE5853A004125DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C6F1CE5853A004125DB /* main.m */; };
 		C8748C731CE5853A004125DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8748C721CE5853A004125DB /* AppDelegate.m */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		C82ACA5A1CEB1E8500A4C9BE /* UIPasteboardTest1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UIPasteboardTest1.entitlements; sourceTree = "<group>"; };
+		C850B11E1CF545BB00AC2968 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C855534E1CEAFF0F00C5573C /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		C8748C6B1CE58539004125DB /* UIPasteboardTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPasteboardTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748C6F1CE5853A004125DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FA96071CEC4AB5004C99F4 /* emmlib.framework in Frameworks */,
+				C850B11F1CF545BB00AC2968 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 		C8748C621CE58539004125DB = {
 			isa = PBXGroup;
 			children = (
+				C850B11E1CF545BB00AC2968 /* CloudKit.framework */,
 				C8FA96051CEC4AA4004C99F4 /* emmlib.framework */,
 				C855534E1CEAFF0F00C5573C /* test.png */,
 				C8748C6D1CE5853A004125DB /* UIPasteboardTest1 */,
@@ -235,6 +239,9 @@
 						DevelopmentTeam = 56MY3ZN5V7;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -451,8 +458,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UIPasteboardTest1/UIPasteboardTest1.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,8 +483,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UIPasteboardTest1/UIPasteboardTest1.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: qinjun ma (B3JPKW426Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qinjun ma (B3JPKW426Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

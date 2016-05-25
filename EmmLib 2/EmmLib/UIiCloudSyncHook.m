@@ -16,12 +16,21 @@ typedef  NSError* __unsafe_unretained* NSErrorPointer;
 
 BOOL isExcludedFromBackupKey = YES;
 
+CHDeclareClass(NSFileManager)
+
+CHMethod(4, BOOL, NSFileManager, setUbiquitous, BOOL, flag, itemAtURL, NSURL*, url, destinationURL, NSURL*, destinationURL, error, NSError* __unsafe_unretained*, err){
+    NSLog(@"####### HOOKED NSFileManager, %s, itemAtURL = %@", __FUNCTION__, url);
+    NSLog(@"%@", self);
+    
+    if(isExcludedFromBackupKey){
+        return YES;
+    }
+    return CHSuper(4, NSFileManager, setUbiquitous, flag, itemAtURL, url, destinationURL, destinationURL, error, err);
+}
+
 CHDeclareClass(NSURL)
 
-
 CHMethod(3, BOOL, NSURL, setResourceValue, id, value, forKey, NSString*, key, error, NSError* __unsafe_unretained*, err){
-    NSLog(@"####### HOOKED NSURL, %s", __FUNCTION__);
-    NSLog(@"%@", self);
     
     id curValue = value;
     
@@ -29,11 +38,13 @@ CHMethod(3, BOOL, NSURL, setResourceValue, id, value, forKey, NSString*, key, er
         curValue = @(isExcludedFromBackupKey);
     }
     
+    NSLog(@"####### HOOKED NSURL, %s, value = %@", __FUNCTION__, curValue);
+    NSLog(@"%@", self);
+
     return CHSuper(3, NSURL, setResourceValue, curValue, forKey, key, error, err);
 }
 
 CHMethod(2, BOOL, NSURL, setResourceValues, NSDictionary*, keyedValues, error,  NSError* __unsafe_unretained*, err){
-    NSLog(@"####### HOOKED NSURL, %s", __FUNCTION__);
     
     NSMutableDictionary *mutDic = [keyedValues mutableCopy];
     
@@ -41,6 +52,9 @@ CHMethod(2, BOOL, NSURL, setResourceValues, NSDictionary*, keyedValues, error,  
     if (value != nil) {
         mutDic[NSURLIsExcludedFromBackupKey] = @(isExcludedFromBackupKey);
     }
+    
+    NSLog(@"####### HOOKED NSURL, %s, values = %@", __FUNCTION__, mutDic);
+
     return CHSuper(2, NSURL, setResourceValues, [mutDic copy], error, err);
 }
 
@@ -49,6 +63,9 @@ CHMethod(2, BOOL, NSURL, setResourceValues, NSDictionary*, keyedValues, error,  
     
     CHHook(3, NSURL, setResourceValue, forKey, error);
     CHHook(2, NSURL, setResourceValues, error);
+    
+    CHLoadClass(NSFileManager);
+    CHHook(4, NSFileManager, setUbiquitous, itemAtURL, destinationURL, error);
 }
 
 
