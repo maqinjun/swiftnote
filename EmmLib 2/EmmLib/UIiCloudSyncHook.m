@@ -78,7 +78,9 @@ CHMethod(2, BOOL, NSURL, setResourceValues, NSDictionary*, keyedValues, error,  
     return [self fileList:docPath] && [self fileList:libPath];
 }
 
-
+/*
+  If you have a large number of support files, you may store them in a custom subdirectory and apply the extended attribute to just the directory.
+ */
 + (BOOL)fileList:(NSString*)directory{
     
     BOOL isOk = YES;
@@ -96,17 +98,11 @@ CHMethod(2, BOOL, NSURL, setResourceValues, NSDictionary*, keyedValues, error,  
         [path appendFormat:@"/%@",each];
         NSURL *filePath = [NSURL fileURLWithPath:path];
         
-        if ([path rangeOfString:@"com.apple.dataaccess.launchd"].length <= 0) {
-            isOk &= [self addSkipBackupAttributeToItemAtURL:filePath];
-        }
-        
-        isOk &= [self fileList:path];
+        isOk &= [self addSkipBackupAttributeToItemAtURL:filePath];
     }
     
     return isOk;
 }
-
-
 
 //设置禁止云同步
 
